@@ -2,13 +2,23 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { BrowserRouter, Route } from 'react-router-dom'
 import {AppContainer} from 'react-hot-loader'
+import {MuiThemeProvider, createMuiTheme, createGenerateClassName, jssPreset} from '@material-ui/core/styles'
+
+import rtl from 'jss-rtl'
+import JssProvider from 'react-jss/lib/JssProvider'
 
 import App from './App'
+
+const theme = createMuiTheme({
+    direction: 'rtl',
+})
 
 ReactDOM.render(
     <AppContainer>
         <BrowserRouter>
-            <Route component={App} />
+            <MuiThemeProvider theme={theme}>
+                <Route component={App} />
+            </MuiThemeProvider>
         </BrowserRouter>
     </AppContainer>,
     document.getElementById('app')
