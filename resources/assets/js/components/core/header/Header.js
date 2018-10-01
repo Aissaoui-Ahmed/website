@@ -6,6 +6,7 @@ import Button from '@material-ui/core/Button'
 import IconButton from '@material-ui/core/IconButton'
 import SearchIcon from '@material-ui/icons/Search'
 
+import TabsContainer from './TabsContainer'
 
 const styles = theme => ({
     toolbarMain: {
@@ -18,19 +19,6 @@ const styles = theme => ({
       justifyContent: 'space-between',
     },
 })
-
-const sections = [
-    'Technology',
-    'Design',
-    'Culture',
-    'Business',
-    'Politics',
-    'Opinion',
-    'Science',
-    'Health',
-    'Style',
-    'Travel',
-]
 
 class Header extends Component {
     render () {
@@ -58,11 +46,12 @@ class Header extends Component {
                     </Button>
                 </Toolbar>
                 <Toolbar variant="dense" className={classes.toolbarSecondary}>
-                    {sections.map(section => (
+                 <TabsContainer />
+                    {/*sections.map(section => (
                         <Typography color="inherit" noWrap key={section}>
                             {section}
                         </Typography>
-                    ))}
+                    ))*/}
                 </Toolbar>
             </Fragment>
         )
