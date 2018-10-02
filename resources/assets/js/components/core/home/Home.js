@@ -19,9 +19,9 @@ const styles = theme => ({
     },
     mainFeaturedPostContent: {
       padding: `${theme.spacing.unit * 6}px`,
-      [theme.breakpoints.up('md')]: {
-        paddingRight: 0,
-      },
+    //   [theme.breakpoints.up('md')]: {
+    //     paddingRight: 0, //
+    //   },
     },
     mainGrid: {
       marginTop: theme.spacing.unit * 3,
@@ -66,6 +66,8 @@ class Home extends Component {
                                 Title of a longer featured blog post
                             </Typography>
                             <Typography variant="headline" color="inherit" paragraph>
+                                Multiple lines of text that form the lede, informing new readers quickly and
+                                efficiently about what&apos;s most interesting in this post&apos;s contents.
                                 Multiple lines of text that form the lede, informing new readers quickly and
                                 efficiently about what&apos;s most interesting in this post&apos;s contents.
                             </Typography>
