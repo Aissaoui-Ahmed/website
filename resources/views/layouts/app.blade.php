@@ -10,7 +10,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
     <script src="{{ mix('js/index.js') }}" defer></script>
 </head>
-<body>
+<body dir="rtl">
 <div id="app"></div>
     @yield('content')
 </body>
