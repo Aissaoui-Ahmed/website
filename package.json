@@ -17,6 +17,7 @@
         "cross-env": "^5.1",
         "jss-rtl": "^0.2.3",
         "laravel-mix": "^2.0",
+        "markdown-loader": "^4.0.0",
         "markdown-to-jsx": "^6.7.3",
         "react": "^16.5.2",
         "react-dom": "^16.5.2",
