@@ -11,13 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');
 
 //___________________Route articles_______________________
 Route::get('articles','ArticleController@index');
@@ -28,3 +25,7 @@ Route::post('articles','ArticleController@store');
 Route::put('articles/{id}','ArticleController@update');
 Route::delete('articles/delete/{id}','ArticleController@destroy');
 //___________________Route articles_______________________
+
+Route::view('/{path?}', 'index')
+     ->where('path', '.*')
+     ->name('index');
