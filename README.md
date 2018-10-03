@@ -3,7 +3,7 @@
 Simple project showing how Laravel works with ~~Vue.js.~~ __React.__
 
 ---
-## [Runinig demo]: (https://djelfa-code-club.herokuapp.com)
+## [Runinig demo](https://djelfa-code-club.herokuapp.com)
 ---
 
 ### How to use
