@@ -63,13 +63,14 @@ class Home extends Component {
                         <Grid item md={6}>
                             <div className={classes.mainFeaturedPostContent}>
                             <Typography variant="display2" color="inherit" gutterBottom>
-                                Title of a longer featured blog post
+                                هذا العنوان الدعائي يكون طويل شوية معليهش
                             </Typography>
                             <Typography variant="headline" color="inherit" paragraph>
-                                Multiple lines of text that form the lede, informing new readers quickly and
-                                efficiently about what&apos;s most interesting in this post&apos;s contents.
-                                Multiple lines of text that form the lede, informing new readers quickly and
-                                efficiently about what&apos;s most interesting in this post&apos;s contents.
+                            هذا نص يتكون من مجموعة من الأسطر، لاعلام القراء الجدد بشكل مختصر وفعال حول المحتوى الأساسي لهذا الموقع
+                            هذا نص يتكون من مجموعة من الأسطر، لاعلام القراء الجدد بشكل مختصر وفعال حول المحتوى الأساسي لهذا الموقع
+                            هذا نص يتكون من مجموعة من الأسطر، لاعلام القراء الجدد بشكل مختصر وفعال حول المحتوى الأساسي لهذا الموقع
+                            هذا نص يتكون من مجموعة من الأسطر، لاعلام القراء الجدد بشكل مختصر وفعال حول المحتوى الأساسي لهذا الموقع
+
                             </Typography>
                             <Typography variant="title" color="inherit">
                                 Continue reading...
