@@ -6,6 +6,7 @@ import Tabs from '@material-ui/core/Tabs'
 import Tab from '@material-ui/core/Tab'
 
 const sections = [
+    'home',
     'technology',
     'design',
     'culture',
@@ -36,9 +37,16 @@ class TabsContainer extends Component {
         this.onTabClick = this.onTabClick.bind(this)
     }
     componentDidMount() {
-        const pathname = this.props.history.location.pathname.replace(/\//g, '') || 'technology'
-        const value = sections.indexOf(pathname) !== -1 ? sections.indexOf(pathname) : 0
-        this.setState({value})
+        const pathname = this.props.history.location.pathname.replace(/\//g, '')
+        let value = 0;
+
+        if (sections.indexOf(pathname) !== -1) {
+            value = sections.indexOf(pathname)
+            this.setState({value})
+        } else {
+            // this.setState({value})
+            // this.props.history.push(sections[value])
+        }
     }
     handleChange(event, value) {
         this.setState({ value });
