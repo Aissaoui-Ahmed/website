@@ -1,21 +1,21 @@
 import React, {Component, Fragment} from 'react'
-// import {withRouter} from 'react-router'
+import {withRouter} from 'react-router'
 import {PropTypes} from 'prop-types'
 import {withStyles} from '@material-ui/core/styles'
 import Tabs from '@material-ui/core/Tabs'
 import Tab from '@material-ui/core/Tab'
 
 const sections = [
-    'Technology',
-    'Design',
-    'Culture',
-    'Business',
-    'Politics',
-    'Opinion',
-    'Science',
-    'Health',
-    'Style',
-    'Travel',
+    'technology',
+    'design',
+    'culture',
+    'business',
+    'politics',
+    'opinion',
+    'science',
+    'health',
+    'style',
+    'travel',
 ]
 
 const styles = theme => ({
@@ -33,9 +33,18 @@ class TabsContainer extends Component {
             value: 0
         }
         this.handleChange = this.handleChange.bind(this)
+        this.onTabClick = this.onTabClick.bind(this)
+    }
+    componentDidMount() {
+        const pathname = this.props.history.location.pathname.replace(/\//g, '') || 'technology'
+        const value = sections.indexOf(pathname) !== -1 ? sections.indexOf(pathname) : 0
+        this.setState({value})
     }
     handleChange(event, value) {
         this.setState({ value });
+    }
+    onTabClick(route) {
+        this.props.history.push(route.toLowerCase())
     }
     render () {
         const {value} = this.state
@@ -50,7 +59,7 @@ class TabsContainer extends Component {
                     scrollButtons="auto"
                 >
                     {sections.map(section => 
-                        (<Tab key={section} label={section} onClick={() => {console.log(section)}} />)
+                        (<Tab key={section} label={section} onClick={() => {this.onTabClick(section)}} />)
                     )}
                 </Tabs>
             </Fragment>
@@ -59,4 +68,4 @@ class TabsContainer extends Component {
     }
 }
 
-export default withStyles(styles)(TabsContainer)
+export default withRouter(withStyles(styles)(TabsContainer))
