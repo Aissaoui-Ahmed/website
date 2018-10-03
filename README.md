@@ -3,6 +3,8 @@
 Simple project showing how Laravel works with ~~Vue.js.~~ __React.__
 
 ---
+## [Runinig demo]: http://slashdot.org
+---
 
 ### How to use
 
